@@ -1,0 +1,42 @@
+$error: #D8463C;
+
+.list {
+    padding: 1.5rem 0;
+    border-top: .05rem solid #eee;
+    &:last-of-type {
+        border-bottom: .05rem solid #eee;
+    }
+}
+
+.item {
+    text-align: left;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    .title {
+        display: inline-block;
+        flex-shrink: 0;
+        color: #333;
+        width: 6.25rem;
+        .must {
+            color: $error
+        }
+    }
+    &.middle {
+        align-items: stretch;
+        > label {
+            margin-top: .3rem;
+        }
+    }
+    &.top {
+        align-items: baseline;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}

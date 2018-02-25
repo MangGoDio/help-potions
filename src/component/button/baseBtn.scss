@@ -1,0 +1,63 @@
+.btn-base {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #6092E0;
+    text-align: center;
+    font-size: .6rem;
+    vertical-align: middle;
+    color: #6092E0;
+    background-color: rgb(255, 255, 255);
+    font-weight: 300;
+    transition: .2s;
+    cursor: pointer;
+    padding: 0;
+    &:disabled {
+        @extend .btn-disabled;
+    }
+}
+
+.btn-blue {
+    background: #6092E0;
+    color: #ffffff;
+    &:hover {
+        background: #547DBE;
+    }
+    &:active {
+        background: #6292e0;
+    }
+}
+
+.btn-no-border {
+    width: auto;
+    border: none;
+    color: #333333;
+    background: transparent;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btn-link {
+    height: auto;
+    width: auto;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    color: #6091DF;
+    background: transparent;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btn-wide {
+    width: 320px;
+}
+
+.btn-disabled {
+    border-color: rgb(184, 189, 185);
+    background-color: rgb(184, 189, 185);
+    cursor: not-allowed;
+    color: #ffffff;
+}

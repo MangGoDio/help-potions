@@ -1,0 +1,126 @@
+$active: #6092E0;
+$error: #D8463C;
+.input-div {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+}
+
+.text-input {
+    width: 16rem;
+    height: 1.75rem;
+    background: #fbfbfb;
+    border: .05rem solid #eee;
+    border-radius: .15rem;
+    font-size: .7rem;
+    padding: 0 .5rem;
+    transition: .2s;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+    font-weight: 300;
+    &:focus {
+        border-color: $active;
+    }
+    &.error {
+        border-color: $error;
+    }
+    &.disabled {
+        cursor: not-allowed;
+        background: #fbfbfb;
+    }
+    &.square {
+        border-radius: 0;
+        padding: 0 .5rem 0 2rem;
+    }
+    &::-webkit-input-placeholder {
+        color: #ccc;
+    }
+    &.full {
+        width: 100%;
+    }
+    &.large {
+        width: 26.25rem;
+    }
+    &.medium {
+        width: 5rem;
+    }
+    &.small {
+        width: 2.5rem;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0;
+    }
+}
+
+.error-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: #D8463C;
+    margin-left: 1rem;
+}
+
+.text {
+    display: inline-block;
+    margin-left: .5rem;
+}
+
+.desc {
+    display: inline-block;
+    margin-left: 1.5rem;
+    color: #ccc;
+}
+
+.spin {
+    position: absolute;
+    margin: auto;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    right: 2px;
+    background: #fbfbfb;
+    >span {
+        position: relative;
+        display: block;
+        width: .95rem;
+        height: 10px;
+        cursor: pointer;
+        &:after {
+            content: '';
+            position: absolute;
+            width: .35rem;
+            height: .35rem;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-right: none;
+            margin: auto;
+            left: 0;
+            right: 0;
+            transition: .2s;
+        }
+        &:hover {
+            &:after {
+                border-color: $active;
+            }
+        }
+    }
+    .add {
+        &:after {
+            transform: rotate(45deg);
+            top: 3px;
+        }
+    }
+    .reduce {
+        &:after {
+            transform: rotate(225deg);
+            bottom: 3px;
+        }
+    }
+}
+
+.img {
+    position: absolute;
+    top: .6rem;
+    left: .5rem;
+    height: .7rem;
+}

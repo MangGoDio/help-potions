@@ -1,0 +1,53 @@
+$active: #6092E0;
+
+.yes-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 100%;
+    border: .05rem solid #333;
+    transform: rotate(-45deg);
+    span {
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 4px;
+        border: .05rem solid #333;
+        border-top: none;
+        border-right: none;
+        left: 3px;
+        top: 3px; 
+        opacity: 0;    
+    }
+}
+
+.blue {
+    border-color: $active;
+    span {
+        border-color: $active;
+    }
+}
+
+.large {
+    width: 1rem;
+    height: 1rem;
+    span {
+        width: 12px;
+        height: 6px;
+        left: 4px;
+        top: 5px; 
+    }
+}
+
+.active {
+    span {
+        opacity: 1;
+    }
+}
+
+
+.cursor {
+    cursor: pointer;
+}

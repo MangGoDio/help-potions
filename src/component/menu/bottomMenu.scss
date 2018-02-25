@@ -1,0 +1,30 @@
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    height: 3.5rem;
+    padding-top: 1rem;
+    width: 51rem;
+    margin-left: -.5rem;
+    color: #ccc;
+    background: #fbfbfb;
+    z-index: 1;
+    >ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        >li {
+            padding: 0 1rem;
+            line-height: 1;
+            border-right: 1px solid #ccc;
+            &:last-of-type {
+                border: none;
+            }
+            &.hover {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

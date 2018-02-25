@@ -1,0 +1,20 @@
+.progress-line {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    position: relative;
+    width: 15rem;
+    background: #eee;
+    height: 4px;
+    margin: 0 1rem;
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        transition: .5s;
+    }
+}

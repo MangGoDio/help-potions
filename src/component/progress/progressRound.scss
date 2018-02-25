@@ -1,0 +1,39 @@
+.progress-round {
+    position: relative;
+    >div {
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        >div {
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            transition: .3s linear;
+            transform: rotate(-135deg);
+        }
+    }
+    .left {
+        left: 0;
+        >div {
+            left: 0;
+        }
+    }
+    .right {
+        right: 0;
+        >div {
+            right: 0;
+        }
+    }
+    .text {
+        position: absolute;
+        margin: auto;
+        background: #eee;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 100%;
+        text-align: center;
+        font-weight: 300;
+    }
+}

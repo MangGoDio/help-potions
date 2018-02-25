@@ -1,0 +1,81 @@
+$active: #6092e0;
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.selector {
+    position: relative;
+    width: 16rem;
+    .btn {
+        width: 100%;
+        height: 1.75rem;
+        border: .05rem solid #eee;
+        background: #fbfbfb;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 1.1rem 0 .5rem;
+        line-height: 1.75rem;
+        color: #ccc;
+        cursor: pointer;
+        border-radius: .15rem;
+        transition: .3s;
+        user-select: none;
+        &:after {
+            content: '';
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            width: .35rem;
+            height: .35rem;
+            border: .05rem solid #ccc;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            transition: .2s;
+        }
+        &.disabled {
+            cursor: not-allowed;
+        }
+    }
+    .list {
+        position: absolute;
+        top: 45px;
+        width: 100%;
+        border-radius: .15rem;
+        background: #fbfbfb;
+        border: .05rem solid #eee;
+        z-index: 1;
+        display: flex;
+        ul {
+            list-style: none;
+        }
+        li {
+            height: 1.75rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 .5rem;
+            line-height: 1.75rem;
+            transition: .2s;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                color: #fff;
+                background: $active;
+            }
+        }
+        .left {
+            flex-grow: 1;
+            border-right: 1px solid #eee;
+        }
+        .right {
+            flex-grow: 2;
+        }
+    }
+}

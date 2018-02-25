@@ -1,0 +1,106 @@
+$common: #ccc;
+$checked: #6092E0;
+
+.radio {
+    display: block;
+    margin: 0 0 .75rem 0;
+    font-size: 0;
+    cursor: pointer;
+    user-select: none;
+    .text {
+        font-size: .7rem;
+        line-height: 1;
+        margin-left: .5rem;
+        color: $common;
+    }
+    .box {
+        position: relative;
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 1px;
+        > input {
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+    .input {
+        position: relative;
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        border-radius: 100%;
+        border: 1px solid $common;
+        transition: all 0.3s;
+        box-shadow: inset 1px 1px 1px #eee;
+        &:after {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            content: '';
+            background: $checked;
+            opacity: 0;
+            transform: scale(.5);
+            border-radius: 100%;
+            transition: all .3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+        }
+    }
+    &:hover {
+        .input {
+            border-color: $checked;
+        }
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.checked {
+    .input {
+        border-color: $checked;
+        box-shadow: none;
+        &:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    .text {
+        color: #333;
+    }
+}
+
+.disabled {
+    cursor: not-allowed;
+    .text {
+        color: #ccc;
+    }
+
+    &.checked{
+        .text {
+            color: #333;
+        }
+    }
+}
+
+.radio-group {
+    &.inline {
+        .radio {
+            display: inline-block;
+            margin: 0 .5rem 0 0;
+        }
+    }
+}
+
+.error {
+    color: #D8463C;
+    margin-top: .75rem;
+    line-height: 1;
+}

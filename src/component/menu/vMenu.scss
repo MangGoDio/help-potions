@@ -1,0 +1,53 @@
+.menu {
+    .menu-item {
+        width: 320px;
+        height: 90px;
+        padding: 30px;
+        border-bottom: 1px solid #eeeeee;
+        line-height: 14px;
+        font-size: 14px;
+        color: #333333;
+        cursor: pointer;
+        .icon {
+            width: 30px;
+        }
+        &.active {
+            background: #EEEEEE;
+        }
+    }
+    .twin-item {
+        width: 320px;
+        height: 90px;
+        border-bottom: 1px solid #eee;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+        }
+        h2 {
+            font-size: .9rem;
+            line-height: 1;
+            margin: 0 0 .5rem 0;
+            font-weight: 300;
+        }
+        p {
+            font-size: .6rem;
+            color: #bbb;
+            line-height: 1;
+        }
+        &.active {
+            background: #EEEEEE;
+        }
+    }
+}
+
+.menu {
+    >div:hover {
+        background: #fbfbfb;
+    }
+}

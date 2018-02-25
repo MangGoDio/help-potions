@@ -1,0 +1,120 @@
+$active: #6092E0;
+
+.drop-down {
+    position: relative;
+    width: 5rem;
+    display: inline-block;
+    margin-right: .5rem;
+    .drop-box {
+        position: relative;
+        width: 100%;
+        height: 1.75rem;
+        border: .05rem solid #eee;
+        background: #fbfbfb;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 1.1rem 0 .5rem;
+        line-height: 1.5rem;
+        color: #333;
+        cursor: pointer;
+        border-radius: .15rem;
+        transition: .3s;
+        user-select: none;
+        &:after {
+            content: '';
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            width: .35rem;
+            height: .35rem;
+            border: .05rem solid #ccc;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            transition: .2s;
+        }
+    }
+    > ul {
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        list-style: none;
+        width: 100%;
+        border: .05rem solid $active;
+        background: #fbfbfb;
+        border-radius: .15rem;
+        max-height: 12.25rem;
+        overflow-y: auto;
+        max-height: 0;
+        opacity: 0;
+        transition: .2s;
+        z-index: 1;
+        > li {
+            height: 1.75rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 .5rem;
+            line-height: 1.5rem;
+            transition: .2s;
+            cursor: pointer;
+            color: $active;
+            &:hover {
+                color: #fff;
+                background: $active;
+            }
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar {
+            width: .25rem;
+            background-color: #Fbfbfb;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $active;
+        }
+    }
+    .drop-bg {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+    }
+}
+
+.drop-down:last-of-type {
+    margin-right: 0;
+}
+
+.drop-down:hover {
+    .drop-box {
+        border: .05rem solid $active;
+    }
+}
+
+.active {
+    .drop-box {
+        border: .05rem solid $active;
+        color: $active;
+        &:after {
+            border-color: $active;
+            top: .7rem;
+            transform: rotate(-225deg);
+        }
+    }
+    > ul {
+        max-height: 12.25rem;
+        opacity: 1;
+    }
+}
+
+.up {
+    > ul {
+        top: -12.5rem;
+    }
+}
